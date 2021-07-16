@@ -27,14 +27,30 @@ function generatePassword() {
     console.log ("length too long");
     return;
 }
+useLowerCase()
 console.log(length)
 }
 
-console.log(lowerCaseArr){
+function useLowerCase() {
+  //// presented with a series of prompts for password criteria
+    var useLowerCaseResponse = confirm("use lowercase?");
+}
+function useLowerCase() {
+  //// presented with a series of prompts for password criteria
+    var useLowerCaseResponse = confirm("use lowercase?");
+}
+console.log(length)
+
+// questionable code below. breaks pw generator
+// function  () {
   
-}
-}
-
-
+//}
+//if (lowerCaseArr==true) {
+//  console.log ("okay");
+//  return;
+//}
+//console.log(lowerCaseArr)
+//}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
