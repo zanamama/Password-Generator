@@ -38,6 +38,7 @@ function useLowerCase() {
 function useLowerCase() {
   //// presented with a series of prompts for password criteria
     var useLowerCaseResponse = confirm("use lowercase?");
+    return;
 }
 console.log(length)
 
