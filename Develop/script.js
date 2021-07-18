@@ -33,8 +33,15 @@ function generatePassword() {
 
 function receivePasswordLength() {
   var passwordLength = prompt ("What password length do you want? Must choose between 8-128");
+  console.log = "passwordLength";
   return passwordLength;
 }
+
+//if (passwordLength < 8)
+  //  console.log="Password length too short! Must be between 8-128 characters";
+  //elseif (passwordLength > 128) 
+  //  console.log="Password length too long! Must be between 8-128 characters";
+
 
 function includeUpperCase() {
   var useUpperCase = confirm ("Would you like to include uppercase letters?");
