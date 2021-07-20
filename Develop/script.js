@@ -49,7 +49,8 @@ function receivePasswordLength() {
 
 function includeUpperCase() {
   var useUpperCase = confirm ("Would you like to include uppercase letters?");
-  return useUpperCase;
+  if (useUpperCase = true);
+  return includeUpperCase ();
 }
 
 function includeLowerCase() {
