@@ -28,28 +28,23 @@ function writePassword() {
 
 function generatePassword() {
   //// presented with a series of prompts for password criteria
-  receivePasswordLength();
+  receivePasswordLength(); 
+  includeUpperCase();
 }
 
 function receivePasswordLength() {
   var passwordLength = prompt ("What password length do you want? Must choose between 8-128");
   if (passwordLength < 8 || passwordLength > 128){
     alert ("Must choose between 8-128 characters in length")
-    receivePasswordLength ();
+  } else {
+    return +passwordLength}
   } 
-  //return receivePasswordLength;
-}
-//console.log = "receivePasswordLength";
-
-//if (passwordLength < 8)
-  //  console.log="Password length too short! Must be between 8-128 characters";
-  //elseif (passwordLength > 128) 
-  //  console.log="Password length too long! Must be between 8-128 characters";
 
 
 function includeUpperCase() {
   var useUpperCase = confirm ("Would you like to include uppercase letters?");
-  if (useUpperCase = true);
+  if (useUpperCase === faslse); {
+}
   return includeUpperCase ();
 }
 
