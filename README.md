@@ -23,3 +23,7 @@ I will be applying the core skills I learned this week, such as Arrays, Strings,
 3. Computer derives a random password with user's specifications.
 
 ## Add more details here with a link to my finished portfolio..or screenshot.
+
+Here's a link to my password generator: file:///Users/makhosazanamathuthu/Dropbox/My%20Mac%20(ZanaMac.local)/Desktop/Password-Generator/Develop/index.html
+
+Here is my github repository of this assignment: https://github.com/zanamama/Password-Generator.git
