@@ -28,24 +28,76 @@ function writePassword() {
 
 function generatePassword() {
   //// presented with a series of prompts for password criteria
-  receivePasswordLength(); 
-  includeUpperCase();
+  var length =receivePasswordLength(); 
+  if( length<8 || length>128){
+    alert('length does not work')
+    return;
+  }
+  var upper = includeUpperCase();
+ var lower =  includeLowerCase();
+ var numbers = includeNumbers();
+ var spec = includeSpecialCharacters();
+
+
+
+//selectedtypes;
+var selectedTypes = [];
+var result = [];
+var gurantee = [];
+
+if(upper){
+  selectedTypes =selectedTypes.concat(upperCaseArr);
+  var randomNum = Math.floor(Math.random() * upperCaseArr.length);
+  gurantee.push(upperCaseArr[randomNum])
+
+
+};
+if(lower){
+  selectedTypes =selectedTypes.concat(lowerCaseArr);
+  var randomNum = Math.floor(Math.random() * lowerCaseArr.length);
+  gurantee.push(lowerCaseArr[randomNum])
+
+
+}
+if(numbers){
+  selectedTypes =selectedTypes.concat(numberArr);
+  var randomNum = Math.floor(Math.random() * numberArr.length);
+  gurantee.push(numberArr[randomNum])
+
+}
+
+if(spec){
+  selectedTypes =selectedTypes.concat(specialCharArr);
+  var randomNum = Math.floor(Math.random() * specialCharArr.length);
+  gurantee.push(specialCharArr[randomNum])
+}
+
+for (let i = 0; i < length; i++) {
+  var randomNum = Math.floor(Math.random() * selectedTypes.length);
+  result.push(selectedTypes[randomNum]);
+}
+
+for (let i = 0; i < gurantee.length; i++) {
+    result[i] = gurantee[i];
+  
+}
+
+console.log(gurantee)
+console.log(result)
+return result.join('');
 }
 
 function receivePasswordLength() {
   var passwordLength = prompt ("What password length do you want? Must choose between 8-128");
-  if (passwordLength < 8 || passwordLength > 128){
-    alert ("Must choose between 8-128 characters in length")
-  } else {
-    return +passwordLength}
-  } 
+  return passwordLength;
+}
 
 
 function includeUpperCase() {
   var useUpperCase = confirm ("Would you like to include uppercase letters?");
-  if (useUpperCase === faslse); {
-}
-  return includeUpperCase ();
+  return useUpperCase;
+//  if (useUpperCase === false); 
+ // console.log(useUpperCase)
 }
 
 function includeLowerCase() {
