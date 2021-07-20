@@ -33,9 +33,13 @@ function generatePassword() {
 
 function receivePasswordLength() {
   var passwordLength = prompt ("What password length do you want? Must choose between 8-128");
-  console.log = "passwordLength";
-  return passwordLength;
+  if (passwordLength < 8 || passwordLength > 128){
+    alert ("Must choose between 8-128 characters in length")
+    receivePasswordLength ();
+  } 
+  //return receivePasswordLength;
 }
+//console.log = "receivePasswordLength";
 
 //if (passwordLength < 8)
   //  console.log="Password length too short! Must be between 8-128 characters";
