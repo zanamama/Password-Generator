@@ -34,29 +34,29 @@ function generatePassword() {
     return;
   }
   var upper = includeUpperCase();
- var lower =  includeLowerCase();
- var numbers = includeNumbers();
- var spec = includeSpecialCharacters();
+  var lower =  includeLowerCase();
+  var numbers = includeNumbers();
+  var spec = includeSpecialCharacters();
 
 
 
 //selectedtypes;
 var selectedTypes = [];
 var result = [];
+//ensuring that if a person picks Uppercase or another variant, that at least one unit of the password includes that selected variation.
 var gurantee = [];
 
+//defining a variable upper , if upper is selected , so that at least one is guaranteed to be a part of the password. A random "upper" will be pushed to the guaranteed array, created above.
 if(upper){
   selectedTypes =selectedTypes.concat(upperCaseArr);
   var randomNum = Math.floor(Math.random() * upperCaseArr.length);
   gurantee.push(upperCaseArr[randomNum])
-
 
 };
 if(lower){
   selectedTypes =selectedTypes.concat(lowerCaseArr);
   var randomNum = Math.floor(Math.random() * lowerCaseArr.length);
   gurantee.push(lowerCaseArr[randomNum])
-
 
 }
 if(numbers){
@@ -71,7 +71,7 @@ if(spec){
   var randomNum = Math.floor(Math.random() * specialCharArr.length);
   gurantee.push(specialCharArr[randomNum])
 }
-
+// loops it - pushes a random number (if selected) to the 'guaranteed' array
 for (let i = 0; i < length; i++) {
   var randomNum = Math.floor(Math.random() * selectedTypes.length);
   result.push(selectedTypes[randomNum]);
@@ -96,7 +96,7 @@ function receivePasswordLength() {
 function includeUpperCase() {
   var useUpperCase = confirm ("Would you like to include uppercase letters?");
   return useUpperCase;
-//  if (useUpperCase === false); 
+
  // console.log(useUpperCase)
 }
 
@@ -111,7 +111,7 @@ function includeSpecialCharacters() {
 }
 
 function includeNumbers() {
-  var useNumbers = confirm ("Would you like to incldue numbers?");
+  var useNumbers = confirm ("Would you like to include numbers?");
   return useNumbers;
 }
 
